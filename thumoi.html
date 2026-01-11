@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thư mời tham gia sự kiện - {{ ten_su_kien }}</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f0f8ff;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 720px;
+      margin: auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .header {
+      background: linear-gradient(270deg, #4facfe, #00c6ff, #00ff88, #4facfe);
+      background-size: 800% 800%;
+      animation: gradientFlow 20s ease infinite;
+      padding: 80px 30px 60px; /* Tăng padding để logo thoáng */
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .logo {
+      max-width: 180px;          /* Kích thước logo */
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 50%;        /* Làm logo tròn (tùy chọn) */
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Bóng nhẹ */
+    }
+    .title {
+      font-size: 2.8em;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+    .content {
+      padding: 40px 50px;
+    }
+    .greeting {
+      font-size: 1.3em;
+      margin: 25px 0 30px;
+      font-weight: bold;
+    }
+    .info-box {
+      background: #e8f5e9;
+      border-left: 6px solid #2e7d32;
+      padding: 25px;
+      margin: 30px 0;
+      border-radius: 8px;
+      font-size: 1.1em;
+    }
+    .highlight {
+      color: #c62828;
+      font-weight: bold;
+    }
+    .sign {
+      text-align: right;
+      font-style: italic;
+      margin-top: 50px;
+      color: #333;
+    }
+    .sign strong {
+      font-size: 1.5em;
+      color: #004080;
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOcd9fJdeFkBrmxlHlnC4mi6v8tDwVMkmnAp44mIMrsA&s" alt="Logo {{ to_chuc }}" class="logo">
+    
+  </div>
+  <div class="content">
+    <p class="greeting">
+      Kính gửi: <strong>{{ ten_nguoi_tham_gia }}</strong><br>
+      ({{ chuc_vu_hoac_lop }})
+    </p>
+
+    <div class="info-box">
+      Chúng tôi trân trọng mời bạn tham gia sự kiện:<br><br>
+      
+      <strong>Sự kiện:</strong> {{ ten_su_kien }}<br>
+      <strong>Thời gian:</strong> {{ thoi_gian }}<br>
+      <strong>Địa điểm:</strong> {{ dia_diem }}<br>
+      <strong>Tổ chức bởi:</strong> <span class="highlight">{{ to_chuc }}</span><br><br>
+      
+      Đây là cơ hội tuyệt vời để kết nối cộng đồng, học hỏi và chia sẻ!
+    </div>
+
+    <p>
+      Kính mong bạn sắp xếp thời gian tham dự và xác nhận sớm để chúng tôi chuẩn bị tốt nhất.<br>
+      Rất mong được gặp bạn tại sự kiện!
+    </p>
+
+    <div class="sign">
+      Trân trọng !<br>
+      <strong>{{ nguoi_gui }}</strong><br>
+      {{ chuc_vu_nguoi_gui }}
+    </div>
+  </div>
+</div>
+</body>
+</html>
